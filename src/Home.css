@@ -1,3 +1,14 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -5,6 +16,8 @@ main {
     height: 100vh;
     background-color: #1a1a23;
     color: white;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
     gap: 2rem; /* Add spacing between sections */
     padding: 2rem; /* Add padding to ensure content doesn't touch edges */
 }
@@ -34,11 +47,15 @@ main {
     font-weight: 300;
     line-height: 1.6;
     color: #d1d1e0;
-    opacity: 100; /* Initially hidden for animation */
+    opacity: 0; /* Initially hidden for animation */
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s;
 }
 
 .picture {
-    opacity: 100; /* Initially hidden for animation */
+    opacity: 0; /* Initially hidden for animation */
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .picture img {
@@ -52,8 +69,6 @@ main {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
-
-
 
 @media (max-width: 1024px) {
     main {
