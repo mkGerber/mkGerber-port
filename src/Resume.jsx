@@ -15,7 +15,7 @@ const Resume = () => {
           <section className="left-section">
             <section className="part">
               <h1>CONTACT</h1>
-              <p>michaelgerber2004@gmail.com</p>
+              <p><span>michaelgerber2004</span><span>@gmail.com</span></p>
               <p><a href="https://www.linkedin.com/in/michael-k-gerber/" target="_blank">LinkedIn.com/in/michael-k-gerber</a></p>
               <p><a href="https://github.com/mkGerber" target="_blank">github.com/mkGerber</a></p>
               <p>Vienna, Virginia</p>
