@@ -1,0 +1,208 @@
+/* Fade-in for the entire resume container */
+.resume-container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards; /* Animation for the container */
+}
+
+p a {
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    padding: 0;
+}
+
+p a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    padding: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+/* Slide-in for the left section */
+.left-section {
+    width: 40%;
+    background-color: rgb(238, 238, 238);
+    border-radius: 0;
+    margin: 0;
+    padding: 5px;
+    opacity: 0;
+    animation: slideInFromLeft 1.2s ease forwards; /* Slide-in animation */
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px); /* Start off-screen to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+/* Slide-in for the right section */
+.right-section {
+    width: 60%;
+    border-radius: 0;
+    padding: 15px;
+    opacity: 0;
+    animation: slideInFromRight 1.2s ease forwards; /* Slide-in animation */
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px); /* Start off-screen to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+header {
+    text-align: center;
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+
+header h1 {
+    font-size: 56px;
+    letter-spacing: 5px;
+    color: #333;
+    font-weight: normal;
+}
+
+header h3 {
+    font-size: 18px;
+    color: #555;
+    letter-spacing: 3px;
+}
+
+.resume-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    margin-bottom: 20px;
+    box-shadow: none;
+}
+
+.part {
+    box-shadow: none;
+    margin: 0;
+    border-bottom: rgb(97, 97, 97) 2px solid;
+    border-radius: 0;
+    transition: box-shadow 0.7s ease, transform 0.7s ease;
+}
+
+.right-part {
+    box-shadow: none;
+    margin: 0;
+    transition: box-shadow 0.7s ease, transform 0.7s ease;
+}
+
+.right-part:hover {
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1) inset, -10px -10px 10px white inset;
+    transform: scale(1.01);
+}
+
+.left-section .part:hover {
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1) inset, -10px -10px 10px white inset;
+    transform: scale(1.01);
+}
+
+.part h1 {
+    letter-spacing: 4px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+li {
+    line-height: 1.8;
+}
+
+.job {
+    transition: box-shadow 0.7s ease, transform 0.7s ease;
+}
+
+.job:hover {
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1) inset, -10px -10px 10px rgb(235, 234, 227) inset;
+    transform: scale(1.01);
+}
+
+.download {
+    display: block;
+    width: 200px;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download:hover {
+    background-color: #555;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.references {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px; /* Adds spacing between reference cards */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+}
+
+.reference {
+    flex: 1; /* Allows each reference to take equal space */
+    min-width: 250px; /* Ensures a reasonable minimum width for each reference */
+    padding: 10px;
+    
+    border-radius: 5px; /* Optional: rounded corners */
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.references p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .references {
+        flex-direction: column; /* Stacks references vertically */
+        gap: 15px; /* Adjust spacing for stacked layout */
+    }
+    
+    .reference {
+        max-width: 100%; /* Ensures references stretch to full width */
+    }
+}
+
