@@ -1,0 +1,158 @@
+.Title{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: white;
+}
+
+.blogs-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a1a23;
+    color: white;
+}
+
+/* Timeline container */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+/* Vertical timeline line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px; /* Thickness of the line */
+    background-color: #888; /* Dark grey for better contrast */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Timeline items */
+.timeline-item {
+    position: relative;
+    width: 45%; /* Reduce width slightly for better spacing */
+    padding: 1.5rem 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Left-side timeline items */
+.timeline-item.left {
+    right: 6%;
+    text-align: right;
+    padding-right: 3rem; /* More space between text and timeline */
+}
+
+/* Right-side timeline items */
+.timeline-item.right {
+    left: 51%;
+    text-align: left;
+    padding-left: 3rem; /* More space between text and timeline */
+}
+
+/* Timeline circles (Markers) */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: #007bff;
+    border-radius: 50%;
+    border: 3px solid white;
+    transform: translateY(-50%);
+}
+
+.timeline-item.left::before {
+    right: -18px; /* Ensures it aligns perfectly with the timeline */
+}
+
+.timeline-item.right::before {
+    left: -18px; /* Ensures it aligns perfectly with the timeline */
+}
+
+/* Blog post content box */
+.content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+}
+
+/* Blog post date styling */
+.date {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ddd;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 20px; /* Shift line to the left for mobile */
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 3rem;
+        text-align: left;
+    }
+    
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+        padding-right: 0;
+        padding-left: 3rem;
+    }
+
+    .timeline-item::before {
+        left: 5px;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blog-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Left-side image hover effect */
+.timeline-item.left .blog-image:hover {
+    transform: scale(2) rotate(10deg) translateX(-60px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Right-side image hover effect */
+.timeline-item.right .blog-image:hover {
+    transform: scale(2) rotate(-10deg) translateX(60px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+
+
+

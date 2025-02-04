@@ -16,6 +16,7 @@ function Navbar() {
         <h4><Link to="/">About Me</Link></h4>
         <h4><Link to="/resume">Resume</Link></h4>
         <h4><Link to="/Projects">Projects</Link></h4>
+        <h4><Link to="/blogs">Blogs</Link></h4>
         <h4 className="contact" onClick={toggleDropdown}>
           Contact
           {showDropdown && (

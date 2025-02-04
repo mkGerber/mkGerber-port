@@ -16,7 +16,7 @@ function Home() {
       <main className={loaded ? 'fadeIn' : ''}>
         <div className="aboutMe">
           <p>
-            JMU student studying computer science. I have skills in front-end development which includes HTML, CSS, JavaScript, React, and styled-components. I also have experience with back-end development using python, SQL, APIs and databases. I am currently seeking an internship for the summer of 2025 to gain more experience in my relevant fields of study.
+          I'm a JMU student studying Computer Science with a strong background in front-end and back-end development. My skills include HTML, CSS, JavaScript, React, and styled-components for front-end work, as well as Python, SQL, APIs, and database management on the back end. I’m passionate about building intuitive, user-friendly applications and continuously expanding my expertise in software development.
           </p>
         </div>
         <div className="picture">

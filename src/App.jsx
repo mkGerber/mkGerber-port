@@ -6,6 +6,7 @@ import Home from "./Home.jsx";
 import Resume from "./Resume.jsx";
 import Projects from "./Projects.jsx";
 import ProjectDetail from "./ProjectDetail.jsx";
+import Blogs from "./Blogs.jsx";
 
 function App() {
   const [isPending, startTransition] = useTransition();
@@ -29,6 +30,10 @@ function App() {
         <Route 
           path="/project/:id" 
           element={<ProjectDetail />} 
+        />
+        <Route
+          path="/Blogs"
+          element={<Blogs />}
         />
       </Routes>
     </Router>

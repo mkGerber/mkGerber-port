@@ -14,7 +14,7 @@ function Projects() {
       name: 'Portfolio Website',
       description: 'Personal website built to showcase my resume, skills, and projects. It includes an interactive UI/UX using React and styled-components.',
       technologies: ['React', 'CSS', 'styled-components', 'Responsive Design' ],
-      link: 'https://dev.d2t33yfquzq2gf.amplifyapp.com'
+      link: 'https://mkgerber.github.io/'
     },
     {
       name: 'Game Wishlist Website',

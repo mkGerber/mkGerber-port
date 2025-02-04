@@ -48,7 +48,7 @@ function ProjectDetail() {
         { src: Portfolio3, orientation: 'horizontal' },
       ],
       technologies: ['React', 'CSS', 'styled-components', 'Responsive Design' ],
-      link: 'https://dev.d2t33yfquzq2gf.amplifyapp.com'
+      link: 'https://mkgerber.github.io/'
     },
     {
       name: 'Game Wishlist Website',
